@@ -1,0 +1,86 @@
+/* ========================= */
+/* ページ全体の背景色設定    */
+/* ========================= */
+body {
+    background-color: #ccffdd; /* ページ全体の背景を薄いグリーンに */
+    font-family: Arial, sans-serif; /* 読みやすいフォント */
+    margin: 0;
+    padding: 20px;
+}
+
+/* ===================== */
+/* 通算成績の表スタイル  */
+/* ===================== */
+.table {
+    max-width: 500px;
+    border-collapse: collapse;
+    margin: 1px 0;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 10px; /* 角を丸くする */
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+    background-color: #ffffff; /* デフォルトの背景 */
+}
+
+/* ヘッダー部分 */
+.table th {
+    background-color: #99ddbb; /* ヘッダーの背景色 */
+    color: black; /* 文字色は黒 */
+    font-weight: bold;
+    font-size: 7px;
+    width: 40%;
+    white-space: nowrap;
+    text-align: center;
+    text-size-adjust: 7px;
+    padding: 8px;
+    border-bottom: 2px solid #77bb99; /* 下線で見やすく */
+}
+
+/* セル部分 */
+.table td {
+    padding: 5px;
+    width: 20px;
+    min-width: 20px;
+    max-width: 100px;
+    width: 40%;
+    font-size: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid #aaddcc;
+    color: black; /* 文字色は黒 */
+    table-layout: fixed;
+}
+
+/* 2列目の幅を固定 */
+table td:nth-child(2), 
+table th:nth-child(2) {
+    min-width: 50px; /* 最小幅 */
+    max-width: 120px; /* 最大幅 */
+    white-space: nowrap;
+    text-align: center; /* 中央揃え */
+}
+
+/* 偶数行の背景色 */
+.table tr:nth-child(even) {
+    background-color: #eeeeee; /* グレー */
+}
+
+/* 奇数行の背景色 */
+.table tr:nth-child(odd) {
+    background-color: #ffffff; /* 白 */
+}
+
+/* ホバー時の強調 */
+.table tr:hover {
+    background-color: #99ddbb; /* マウスオーバー時の色 */
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
+    .table th, .table td {
+        padding: 8px;
+    }
+}
